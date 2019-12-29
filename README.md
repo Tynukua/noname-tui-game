@@ -13,8 +13,8 @@ $ src/a.out
 
 
 TODO:
- + __helicopter__
- + __road__
+ + ~~Helicopter~~
+ + ~~road~~
  - enemies
  - guns
  - health 
