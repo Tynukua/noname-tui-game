@@ -9,7 +9,7 @@ void drowRoad()//int TERM_MAX_X, int MAX_X)
     FILE * road;
     for(i = 0; i<roadcount;i++)
     {
-        road = fopen("../resource/background/road.txt","r");
+        road = fopen("./resource/background/road.txt","r");
         tmpchar =fgetc(road);
         while(tmpchar != EOF){
             if (tmpchar=='\n'){
