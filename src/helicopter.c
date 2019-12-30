@@ -2,7 +2,7 @@
 void writePropeler(helicopter_t instant)
 {
     int x = instant.x;
-    int y = instant.y;
+    int y = TERM_MAX_Y - instant.y;
     int looperlen = 4+ instant.propelerstatenum*2;
     int position=0;
     for(int i =0; i< 24-looperlen;i++, position++);
@@ -14,8 +14,8 @@ void writePropeler(helicopter_t instant)
 void writeHelicopter(helicopter_t instant)
 {
 
-    int x = instant.x;
-    int y = instant.y;
+    int x =  instant.x;
+    int y = TERM_MAX_Y - instant.y;
     char tmpchar;
     FILE * body = fopen("./resource/holicopter/body.txt", "r");
     tmpchar =fgetc(body);
@@ -34,7 +34,7 @@ void writeHelicopter(helicopter_t instant)
             
         }
         else{
-            mvaddch(y+1,x, tmpchar);
+            mvaddch(y+1, x, tmpchar);
             tmpchar =fgetc(body);
             x++;
         }

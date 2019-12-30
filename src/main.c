@@ -6,7 +6,7 @@ int TERM_MAX_X, TERM_MAX_Y;
 int main()
 {
     char isbacking=0; 
-    helicopter_t helicopter= {10,10,0};
+    helicopter_t helicopter= {1,9,0};
     initscr();
     curs_set(0);
     noecho();
@@ -34,8 +34,8 @@ int main()
         move(1,0);
         printw("%d:%d", helicopter.x, helicopter.y);
         int ch = getch();
-        if (ch == KEY_DOWN)  helicopter.y++;
-        if (ch == KEY_UP)    helicopter.y--;
+        if (ch == KEY_DOWN)  helicopter.y--;
+        if (ch == KEY_UP)    helicopter.y++;
         if (ch == KEY_LEFT)  helicopter.x--;
         if (ch == KEY_RIGHT) helicopter.x++;
         clear();

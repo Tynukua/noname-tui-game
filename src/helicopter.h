@@ -3,7 +3,7 @@
 #include <ncurses.h>
 
 
-
+int TERM_MAX_X, TERM_MAX_Y;
 
 typedef struct structhelicopter
 {
